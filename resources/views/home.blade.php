@@ -17,6 +17,14 @@
                     {{ __('You are logged in!') }}
                 </div>
             </div>
+            <br>
+            <div class="card">
+                <div class="card-header">Mes stars</div>
+
+                <div class="card-body">
+                  <a class="btn btn-primary" href="{{route('star.index')}}"> Gérer mes stars </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
