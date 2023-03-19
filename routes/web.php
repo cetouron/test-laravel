@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Stars;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/stars', function () {
-    return view('stars');
+Route::get('/stars', function () { //je devrais créer une class à  part pour plus de lisibilité et meilleur utilisation, mais gain de temps
+    $stars = Stars::all();
+    return view('stars', compact("stars"));
 });
 
 Route::group(['middleware' => 'auth'], function () {
