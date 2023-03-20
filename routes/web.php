@@ -33,6 +33,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('star', \App\Http\Controllers\StarsController::class);
 });
 
+Route::get('/starsList', function () { //je devrais créer une class à  part pour plus de lisibilité et meilleur utilisation, mais gain de temps
+    $stars = Stars::all();
+    return response()->json($stars);
+});
+
 
 Auth::routes();
 

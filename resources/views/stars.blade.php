@@ -22,7 +22,7 @@
         </div>
 
         <hr>
-        <h1>Affichage en vue (sans lien base)</h1>
+        <h1>Affichage en Vue JS</h1>
         <div id="star"></div>
         @vite('resources/js/stars.js')
     </div>

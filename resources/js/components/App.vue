@@ -2,7 +2,7 @@
     <div class="dynamic-component-demo-personnalites-tab">
         <ul class="dynamic-component-demo-personnalites-sidebar">
             <li
-                v-for="personnalite in personnalites"
+                v-for="personnalite in stars"
                 :key="personnalite.id"
                 :class="{
           'dynamic-component-demo-active': personnalite === selectedPost
@@ -14,8 +14,8 @@
         </ul>
         <div class="dynamic-component-demo-personnalite-container">
             <div v-if="selectedPost" class="dynamic-component-demo-personnalite">
-                <h3>  <img :src="selectedPost.photo_url" width="100"> {{ selectedPost.prenom }} {{ selectedPost.nom }}</h3>
-                <div v-html="selectedPost.content"></div>
+                <h3>  <img :src="'images/'+selectedPost.photo_url" width="100"> {{ selectedPost.prenom }} {{ selectedPost.nom }}</h3>
+                <div v-html="selectedPost.description"></div>
             </div>
             <strong v-else>
                 Cliquez sur une personnalité
@@ -29,9 +29,15 @@
 
 <script>
 export default {
+    created() {
+        axios.get("/starsList")
+            .then(response => this.stars = response.data)
+            .catch()
+    },
     data() {
         return {
             dialog: false,
+            stars: {},
             personnalites: [
                 {
                     id: 1,
