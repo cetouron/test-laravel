@@ -15,7 +15,7 @@ import { createApp } from 'vue';
 
 const app = createApp({});
 
-import ExampleComponent from './components/ExampleComponent.vue';
+import ExampleComponent from './components/App.vue';
 app.component('example-component', ExampleComponent);
 
 /**
@@ -26,7 +26,8 @@ app.component('example-component', ExampleComponent);
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-// Object.entries(import.meta.glob('./**/*.vue', { eager: true })).forEach(([path, definition]) => {
+
+//Object.entries(import.meta.glob('./**/*.vue', { eager: true })).forEach(([path, definition]) => {
 //     app.component(path.split('/').pop().replace(/\.\w+$/, ''), definition.default);
 // });
 

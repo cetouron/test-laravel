@@ -53,7 +53,7 @@ class StarTableSeeder extends Seeder
         Stars::create([
             'nom' => "Law",
             'prenom' => "Jude",
-            'description' => "Jude Law [ˈd͡ʒuːd lɔː]2 est un acteur, réalisateur et producteur de cinéma britannique, né le 29 décembre 1972 à Lewisham (Londres).
+            'description' => "Jude Law est un acteur, réalisateur et producteur de cinéma britannique, né le 29 décembre 1972 à Lewisham (Londres).
                             Révélé durant les années 1990 par Bienvenue à Gattaca (1997), eXistenZ (1998) et Le Talentueux Mr. Ripley (1999), Stalingrad (2001). Il joue ensuite dans des grandes productions hollywoodiennes : A.I. Intelligence artificielle (2001), Les Sentiers de la perdition (2002), Retour à Cold Mountain (2003) et le thriller sentimental Entre adultes consentants (2004).
                             Par la suite, il tourne à deux reprises avec Martin Scorsese dans Aviator (2004) et Hugo Cabret (2011), et avec Steven Soderbergh dans Contagion (2011) et Effets secondaires (2013). Il connait son plus gros succès commercial3 en incarnant le Dr John Watson dans les films Sherlock Holmes (2009) et Sherlock Holmes : Jeu d'ombres (2011), réalisés par Guy Ritchie.
                             En 2016, il joue dans l'acclamée série The Young Pope le rôle du pape Pie XIII, puis à nouveau en 2020 dans The New Pope, deux séries écrites et réalisées par Paolo Sorrentino.

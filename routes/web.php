@@ -18,6 +18,10 @@ Route::get('/', function () {
     return redirect()->route('stars');
 });
 
+Route::get('/app', function () {
+    return view('app');
+});
+
 Route::get('/stars', function () { //je devrais créer une class à  part pour plus de lisibilité et meilleur utilisation, mais gain de temps
     $stars = Stars::all();
     return view('stars', compact("stars"));

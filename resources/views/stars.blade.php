@@ -3,6 +3,7 @@
 @section('content')
     <div class="container">
         <div class="col-md-12">
+            <h1>Affichage en html</h1>
             <div class="row justify-content-center">
                 <ul id="onglets">
                     @foreach($stars as $star)
@@ -19,6 +20,11 @@
                 </div>
             </div>
         </div>
+
+        <hr>
+        <h1>Affichage en vue (sans lien base)</h1>
+        <div id="star"></div>
+        @vite('resources/js/stars.js')
     </div>
 @endsection
 
