@@ -15,14 +15,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('stars');
 });
 
 Route::get('/stars', function () { //je devrais créer une class à  part pour plus de lisibilité et meilleur utilisation, mais gain de temps
     $stars = Stars::all();
     return view('stars', compact("stars"));
-});
+})->name('stars');
 
+//Accès uniquement si authentifié
 Route::group(['middleware' => 'auth'], function () {
     Route::delete('star/deleteSelected', [\App\Http\Controllers\StarsController::class, 'deleteSelected'])->name('star.deleteSelected');
     Route::resource('star', \App\Http\Controllers\StarsController::class);

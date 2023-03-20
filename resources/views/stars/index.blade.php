@@ -6,8 +6,7 @@
 
         <div class="row mt-1">
             <div class="col-9">&nbsp;</div>
-            <div class="col-3 text-end"><a href="{{ route('star.create') }}" class="btn btn-primary">Ajouter <i
-                        class="fas fa-plus-circle"></i></a></div>
+            <div class="col-3 text-end"><a href="{{ route('star.create') }}" class="btn btn-primary">Ajouter</a></div>
         </div>
         <br> <br>
         <div class="col-md-12">
@@ -78,13 +77,15 @@
 
 <script>
 
+
+    //Tout checker
     function selectAll(source) {
         checkboxes = document.getElementsByName('checkedStar[]');
         for (var i = 0, n = checkboxes.length; i < n; i++) {
             checkboxes[i].checked = source.checked;
         }
     }
-
+    //Check un enregistrement
     function selectLigne() {
         checkBoxes = document.getElementsByName('checkedStar[]');
         checkedAll = true;
